@@ -21,6 +21,24 @@ export const frontmatter = {\\"title\\":\\"Hey\\"}
 }
 `;
 
+exports[`transform basicWithId 1`] = `
+"<script context=\\"module\\">
+export const frontmatter = {\\"id\\":\\"x123\\",\\"title\\":\\"Hey\\"}
+</script>
+
+<svelte:head>
+<title>Hey</title>
+<meta property=\\"og:title\\" content=\\"Hey\\">
+</svelte:head>
+<div class=\\"markdown-body\\"><h1>Hello</h1>
+<ul>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ul>
+</div>"
+`;
+
 exports[`transform escape curly braces in code block 1`] = `
 Object {
   "code": "<script context=\\"module\\">

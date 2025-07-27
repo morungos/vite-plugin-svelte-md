@@ -23,6 +23,22 @@ title: Hey
     chai.expect(mdToSvelte("", md)).toMatchSnapshot();
   });
 
+  it("basicWithId", () => {
+    const options = resolveOptions({headId: 'id'});
+    const mdToSvelte = createMarkdownProcessor(options);
+    const md = `---
+title: Hey
+---
+
+# Hello
+
+- A
+- B
+- C
+`;
+    chai.expect(mdToSvelte("x123", md)).toMatchSnapshot();
+  });
+
   it("style", () => {
     const md = `
 # Hello

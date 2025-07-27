@@ -119,7 +119,7 @@ export function createMarkdownProcessor(
 
   return (id: string, text: string) => {
     const raw = text.trimEnd();
-    const { wrapperClasses, headEnabled } = options;
+    const { wrapperClasses, headEnabled, headId } = options;
 
     const parsedFrontmatter = grayMatter(raw);
 
@@ -133,7 +133,10 @@ export function createMarkdownProcessor(
     const parsedHtml = parseHtml(html);
 
     const { head, frontmatter } = frontmatterPreprocess(
-      parsedFrontmatter?.data ?? {},
+      { 
+        ...((headId) ? { [headId]: id } : {}),
+        ...(parsedFrontmatter?.data ?? {}),
+      },
       options,
     );
     parsedHtml.moduleContext.prepend(

@@ -31,6 +31,14 @@ export interface Options {
    */
   wrapperClasses?: string | string[];
 
+  /**
+   * If present, adds Vite's filename/id into generated frontmatter
+   * using the specified property, typically `id`
+   * 
+   * @default null
+   */
+  headId?: string | null
+
   include?: FilterPattern;
   exclude?: FilterPattern;
 }
@@ -49,6 +57,7 @@ export function resolveOptions(userOptions: Options): ResolvedOptions {
     markdownItUses: [],
     include: null,
     exclude: null,
+    headId: null,
     ...userOptions,
     wrapperClasses: toArray(userOptions.wrapperClasses ?? "markdown-body")
       .filter((i) => i)
