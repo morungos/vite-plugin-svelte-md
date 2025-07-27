@@ -84,7 +84,10 @@ function parseHtml(html: string) {
   return { html: newHtml, moduleContext, instanceScript, svelteTags };
 }
 
-export type MarkdownProcessor = (id: string, text: string) => string;
+export type MarkdownProcessor = (id: string, text: string) => {
+  code: string,
+  map: string | null
+};
 /**
  * Creates md processor
  */
@@ -151,7 +154,10 @@ export function createMarkdownProcessor(
 ${parsedHtml.instanceScript.toTag()}
 ${parsedHtml.svelteTags.map((tag) => tag.toTag()).join("\n")}
 ${parsedHtml.html}`;
-    return svelteSfc;
+    return {
+      code: svelteSfc,
+      map: null
+    };
   };
 }
 

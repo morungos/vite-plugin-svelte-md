@@ -34,7 +34,7 @@ export default function (options: Options = {}): Plugin {
 
       const defaultRead = ctx.read;
       ctx.read = async function () {
-        return mdToSvelte(ctx.file, await defaultRead());
+        return mdToSvelte(ctx.file, await defaultRead()).code;
       };
     },
   };

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`transform basic 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {\\"title\\":\\"Hey\\"}
 </script>
 
@@ -15,11 +16,14 @@ export const frontmatter = {\\"title\\":\\"Hey\\"}
 <li>B</li>
 <li>C</li>
 </ul>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform escape curly braces in code block 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 
@@ -28,21 +32,27 @@ export const frontmatter = {}
     return foo
 &#125;
 </code></pre>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform escape curly braces in code inline 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 
 
 <div class=\\"markdown-body\\"><p><code>&#123;...&#125;</code></p>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform escape curly braces in fence 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 
@@ -51,11 +61,14 @@ export const frontmatter = {}
  return foo
 &#125;
 </code></pre>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform escape curly braces in header 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {\\"title\\":\\"\`{#if}\`\\"}
 </script>
 
@@ -63,11 +76,14 @@ export const frontmatter = {\\"title\\":\\"\`{#if}\`\\"}
 <title>\`&#123;#if&#125;\`</title>
 <meta property=\\"og:title\\" content=\\"\`&#123;#if&#125;\`\\">
 </svelte:head>
-<div class=\\"markdown-body\\"></div>"
+<div class=\\"markdown-body\\"></div>",
+  "map": null,
+}
 `;
 
 exports[`transform escapeCodeTagInterpolation 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 
@@ -75,11 +91,14 @@ export const frontmatter = {}
 <div class=\\"markdown-body\\"><div>{hello}</div>
 <pre><code class=\\"language-svelte\\">&lt;div&gt;&#123;hello&#125;&lt;/div&gt;
 </code></pre>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform exposes frontmatter 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {\\"title\\":\\"Hey\\"}
 </script>
 
@@ -88,11 +107,14 @@ export const frontmatter = {\\"title\\":\\"Hey\\"}
 <meta property=\\"og:title\\" content=\\"Hey\\">
 </svelte:head>
 <div class=\\"markdown-body\\"><h1>Hello</h1>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform frontmatter interpolation 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 
@@ -101,11 +123,14 @@ export const frontmatter = {}
 <h2>name: ‘My Cool App’</h2>
 <h1>Hello World</h1>
 <p>This is {frontmatter.name}</p>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform script 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 <script lang=\\"ts\\">
@@ -115,11 +140,14 @@ import Foo from './Foo.vue'
 </script>
 
 <div class=\\"markdown-body\\"><h1>Hello</h1>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform scriptInsideSvelte 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 
@@ -129,21 +157,27 @@ export const frontmatter = {}
 <div class=\\"markdown-body\\"><p></p>
 <pre><code class=\\"language-svelte\\">&lt;svelte:head&gt;&lt;script async src=&quot;foo.js&quot;&gt;&lt;/script&gt;&lt;/svelte:head&gt;
 </code></pre>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform style 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {}
 </script>
 
 
 <div class=\\"markdown-body\\"><h1>Hello</h1>
-<style>h1 { color: red }</style></div>"
+<style>h1 { color: red }</style></div>",
+  "map": null,
+}
 `;
 
 exports[`transform use component 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {\\"title\\":\\"Markdown to Svelte\\"}
 </script>
 <script>
@@ -163,5 +197,7 @@ export const frontmatter = {\\"title\\":\\"Markdown to Svelte\\"}
 </ul>
 
 <p><MyComponent>You can use Svelte components in Markdown</MyComponent></p>
-</div>"
+</div>",
+  "map": null,
+}
 `;

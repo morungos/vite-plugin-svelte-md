@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`transform with head basic 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {\\"title\\":\\"Hey\\"}
 </script>
 
@@ -15,11 +16,14 @@ export const frontmatter = {\\"title\\":\\"Hey\\"}
 <li>B</li>
 <li>C</li>
 </ul>
-</div>"
+</div>",
+  "map": null,
+}
 `;
 
 exports[`transform with head head tag 1`] = `
-"<script context=\\"module\\">
+Object {
+  "code": "<script context=\\"module\\">
 export const frontmatter = {\\"title\\":\\"Hey\\"}
 </script>
 <script>
@@ -42,5 +46,7 @@ export const frontmatter = {\\"title\\":\\"Hey\\"}
 </ul>
 
 <p></p>
-<MyComponent /></div>"
+<MyComponent /></div>",
+  "map": null,
+}
 `;

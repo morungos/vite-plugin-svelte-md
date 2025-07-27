@@ -117,9 +117,9 @@ title: Hello Svelte
       it(fixture.name, () => {
         const sfc = mdToSvelte(fixture.name, fixture.content);
         if (process.argv.includes("--update")) {
-          fs.writeFileSync(`${fixture.path}.svelte`, sfc, "utf-8");
+          fs.writeFileSync(`${fixture.path}.svelte`, sfc.code, "utf-8");
         }
-        chai.expect(sfc).toMatchSnapshot();
+        chai.expect(sfc.code).toMatchSnapshot();
       });
     }
   });
